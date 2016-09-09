@@ -1,0 +1,2 @@
+# nodicprgramScanQr
+nodicprgramScanQr

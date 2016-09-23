@@ -1,0 +1,5 @@
+dd5434343434
+dd5423232323
+Parsing parameters.
+ERROR: The area to write is not erased.
+

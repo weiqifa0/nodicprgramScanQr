@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = NodicProgramQr
+TARGET = NodicProgramQrV1.1.2
 TEMPLATE = app
 RC_FILE = nodic.rc
 
@@ -22,4 +22,4 @@ HEADERS  += mainwindow.h \
     mythread.h
 
 FORMS    += mainwindow.ui
-DESTDIR  += "E:\project\github\scanqr\nodicprgramScanQr\NodicProgram"
+DESTDIR  += "E:\project\github\nodicprgramScanQr\NodicProgram"

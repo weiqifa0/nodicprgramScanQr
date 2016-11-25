@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>755</width>
-    <height>465</height>
+    <width>944</width>
+    <height>494</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -32,6 +32,53 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="2">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>日志</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;1、安装了nRF5x-Command-Line-Tools_8_4_0_Installer.exe&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;2、联系QQ：329410527 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;3、版本：V1.2.0&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;4、命令：&lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#008000;&quot;&gt;nrfjprog.exe&lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#008000;&quot;&gt;--memwr&lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#008000;&quot;&gt;0x10001090&lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'微软雅黑'; font-size:9pt; color:#008000;&quot;&gt;--val&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item row="0" column="0">
        <widget class="QGroupBox" name="groupBox">
         <property name="sizePolicy">
@@ -61,6 +108,16 @@
           </widget>
          </item>
          <item>
+          <widget class="QCheckBox" name="checkBox">
+           <property name="text">
+            <string>向0x10001098写入数据</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QScrollArea" name="scrollArea">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -77,7 +134,7 @@
               <x>0</x>
               <y>0</y>
               <width>233</width>
-              <height>368</height>
+              <height>283</height>
              </rect>
             </property>
             <widget class="QLabel" name="label">
@@ -116,50 +173,44 @@
            </widget>
           </widget>
          </item>
+         <item>
+          <widget class="QCommandLinkButton" name="commandLinkButton">
+           <property name="text">
+            <string>读取0x10001098地址值</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCommandLinkButton" name="commandLinkButton_2">
+           <property name="text">
+            <string>读取TS102MAC地址</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
+       <widget class="QGroupBox" name="groupBox_3">
         <property name="title">
-         <string>日志</string>
+         <string>注意USB连接设备的颜色和下面显示的颜色是否相同</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QTextBrowser" name="textBrowser">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="labelcolour">
            <property name="enabled">
             <bool>true</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
            </property>
            <property name="font">
             <font>
              <family>微软雅黑</family>
-             <pointsize>11</pointsize>
+             <pointsize>24</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
-           <property name="mouseTracking">
-            <bool>false</bool>
-           </property>
-           <property name="html">
-            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;1、安装了nRF5x-Command-Line-Tools_8_4_0_Installer.exe&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;2、联系QQ：329410527 &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;3、版本：V1.0.5&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:9pt;&quot;&gt;4、命令：&lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#008000;&quot;&gt;nrfjprog.exe&lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#008000;&quot;&gt;--memwr&lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#008000;&quot;&gt;0x10001090&lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#008000;&quot;&gt;--val&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="text">
+            <string>牙刷尾巴颜色</string>
            </property>
           </widget>
          </item>

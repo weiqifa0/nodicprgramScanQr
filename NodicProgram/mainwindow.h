@@ -23,10 +23,15 @@ public:
     #define RESET_CMD "nrfjprog.exe -f NRF52 --reset"
     #define DEL_TEMP "del temp.hex\n\r"
     #define READ_MAC_CMD "nrfjprog.exe --memrd 0x100000a3 --n 7"
+    #define C_MAC_STRING 6
     Ui::MainWindow *ui;
 private slots:
     void on_lineEdit_textChanged(const QString &arg1);
     void on_lineEdit_editingFinished();
+    void on_commandLinkButton_2_clicked();
+    void on_commandLinkButton_clicked();
+
+    void on_checkBox_clicked(bool checked);
 
 private:
 };

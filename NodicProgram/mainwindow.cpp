@@ -167,7 +167,8 @@ void MainWindow::on_lineEdit_textChanged(const QString &arg1)
     //向flash0x10001098写入值
     if(ui->checkBox->isChecked()==true)
     {
-        p.start("nrfjprog.exe --memwr 0x10001098 --val 0x31303230");
+        ui->textBrowser->append("nrfjprog.exe --memwr 0x1000109C --val 0xFF12FF34");
+        p.start("nrfjprog.exe --memwr 0x1000109C --val 0xFF12FF34");
         p.waitForStarted();
         p.waitForFinished();
         readCmd = p.readAllStandardOutput();
@@ -177,7 +178,7 @@ void MainWindow::on_lineEdit_textChanged(const QString &arg1)
         {
             ui->textBrowser->append("写FLASH命令执行出错!!!!");
         }
-        qDebug()<<"nrfjprog.exe --memwr 0x10001098 --val 0x31303230";
+        qDebug()<<"nrfjprog.exe --memwr 0x1000109C --val 0xFF12FF34";
     }
     //复位
     p.start("nrfjprog.exe -r");
@@ -240,8 +241,8 @@ void MainWindow::on_commandLinkButton_clicked()
 {
     QProcess p(0);
     QByteArray readCmd;
-    //读取MAC地址
-    p.start("nrfjprog.exe --memrd 0x10001098");
+    //读取flash地址
+    p.start("nrfjprog.exe --memrd 0x1000109c");
     p.waitForStarted();
     p.waitForFinished();
     readCmd = p.readAllStandardOutput();
@@ -250,7 +251,7 @@ void MainWindow::on_commandLinkButton_clicked()
     QString sReadMac=QString(readCmd);
     qDebug()<<sReadMac.mid(12,8);
 
-    if(readCmd.indexOf("ERROR")>=0)
+    if(readCmd.contains("ERROR"))
     {
         QPalette pa;
         pa.setColor(QPalette::WindowText,Qt::red);

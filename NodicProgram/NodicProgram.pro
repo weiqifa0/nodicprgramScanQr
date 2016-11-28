@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = NodicProgramQrV1.1.2
+TARGET = NodicProgramQrV1.1.3
 TEMPLATE = app
 RC_FILE = nodic.rc
 
